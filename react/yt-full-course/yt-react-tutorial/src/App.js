@@ -22,12 +22,21 @@ function App() {
   // );
 
   return(
-    <>
+    // <>
+    //   <div>
+    //   <h1>Tharindu</h1>
+    //   </div>
+    //   <p>Hello</p>
+    // </>
+
+    <section>
       <div> 
+        TDM Madushanka
       <h1>Tharindu</h1>
       </div>
       <p>Hello</p>
-    </>
+    </section>
+
   ); 
 }
 
