@@ -13,6 +13,11 @@
 const name ='Tharindu'
 const position= 'Student'
 
+const myObj ={
+    name:'obj Tharindu',
+    position:'obj Student'
+}
+
 function Main(props){
     // const name ='Tharindu'
     // const position= 'Student'
@@ -23,6 +28,8 @@ function Main(props){
                 <li>Hello pargraph</li>
                 <li>name</li>
                 <li>position</li>
+                <li>myObj.name</li>
+                <li>myObj.position</li>
             </ul>
             {props.children}
         </div>
