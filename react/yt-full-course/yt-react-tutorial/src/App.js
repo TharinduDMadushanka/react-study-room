@@ -32,6 +32,12 @@ function App() {
         <p>I am children pargraph</p>
       </Main>
 
+        {/* This is manual parametering */}
+        
+        <Main name='Shankar' city='Colombo' position='web dev'/>
+        <Main name='Madu' city='Matara' position='full stack dev'/>
+     
+
     </section>
 
   ); 

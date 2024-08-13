@@ -45,6 +45,8 @@ const myObj ={
 //     );
 // }
 
+// properties distrucre
+
 function Main({children}){
 
     const {city} = myObj
