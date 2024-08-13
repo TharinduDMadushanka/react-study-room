@@ -16,8 +16,8 @@ function Main(props){
             This is my Main Component
             <ul>
                 <li>Hello pargraph</li>
-                <li>{props.children}</li>
             </ul>
+            {props.children}
         </div>
         
     );
