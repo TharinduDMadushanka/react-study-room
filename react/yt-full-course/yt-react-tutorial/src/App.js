@@ -21,7 +21,14 @@ function App() {
   //   </div>
   // );
 
-  return <div></div>
+  return(
+    <>
+      <div> 
+      <h1>Tharindu</h1>
+      </div>
+      <p>Hello</p>
+    </>
+  ); 
 }
 
 export default App;
