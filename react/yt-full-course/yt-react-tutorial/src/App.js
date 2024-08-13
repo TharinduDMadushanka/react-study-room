@@ -21,6 +21,8 @@ function App() {
 
       {/* import the Main function */}
       <Main />
+      {/* import the Main function */}
+      <Main></Main>
 
     </section>
 
