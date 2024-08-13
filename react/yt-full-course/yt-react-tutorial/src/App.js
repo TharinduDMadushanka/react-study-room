@@ -27,7 +27,9 @@ function App() {
       <Main />
       <Main />
       {/* import the Main function */}
-      <Main></Main>
+      <Main>
+        <h5>This is children property inside Main function</h5>
+      </Main>
 
     </section>
 
