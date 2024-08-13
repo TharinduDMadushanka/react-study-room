@@ -10,9 +10,12 @@
 //     );
 // }
 
+const name ='Tharindu'
+const position= 'Student'
+
 function Main(props){
-    const name ='Tharindu'
-    const position= 'Student'
+    // const name ='Tharindu'
+    // const position= 'Student'
     return(
         <div>
             This is my Main Component
