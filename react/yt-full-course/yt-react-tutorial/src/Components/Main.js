@@ -11,11 +11,15 @@
 // }
 
 function Main(props){
+    const name ='Tharindu'
+    const position= 'Student'
     return(
         <div>
             This is my Main Component
             <ul>
                 <li>Hello pargraph</li>
+                <li>name</li>
+                <li>position</li>
             </ul>
             {props.children}
         </div>

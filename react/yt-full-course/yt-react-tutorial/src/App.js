@@ -29,6 +29,7 @@ function App() {
       {/* import the Main function */}
       <Main>
         <h5>This is children property inside Main function</h5>
+        <p>I am children pargraph</p>
       </Main>
 
     </section>
