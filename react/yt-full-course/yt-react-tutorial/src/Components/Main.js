@@ -19,12 +19,38 @@ const myObj ={
     city:'Galle'
 }
 
-function Main(props){
-    // object destructuring
+// function Main(props){
+//     // object destructuring
+//     const {city} = myObj
+
+//     console.log(props)
+
+//     // const name ='Tharindu'
+//     // const position= 'Student'
+
+//     return(
+//         <div>
+//             This is my Main Component
+//             <ul>
+//                 <li>Hello pargraph</li>
+//                 <li>name</li>
+//                 <li>{city}</li>
+//                 <li>position</li>
+//                 <li>myObj.name</li>
+//                 <li>myObj.position</li>
+//             </ul>
+//             {props.children}
+//         </div>
+        
+//     );
+// }
+
+function Main({children}){
+
     const {city} = myObj
 
-    // const name ='Tharindu'
-    // const position= 'Student'
+    // console.log(props)
+    
     return(
         <div>
             This is my Main Component
@@ -36,7 +62,7 @@ function Main(props){
                 <li>myObj.name</li>
                 <li>myObj.position</li>
             </ul>
-            {props.children}
+            {children}
         </div>
         
     );
