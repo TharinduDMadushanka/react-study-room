@@ -55,13 +55,24 @@ function App() {
 
 
 {/* By using Object distructuring */}
+
+  {/*
       {
         myData.map(({name, city,position}) => {
-          // return <p>{element.name}</p>
           return <Main name={name} city={city}
           position={position}/>;
         })
       }
+  */}
+
+  {/* to error remove in dev tools give unique key */}
+
+{
+    myData.map(({name, city,position},index) => {
+      return <Main key={index} name={name} city={city}
+      position={position}/>;
+    })
+}
 
     </>
 
