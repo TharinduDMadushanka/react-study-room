@@ -5,6 +5,10 @@ import myData from './Data/myData';
 // import a file with another way
 // import {myData} from './Data/myData'; 
 
+const MainBlock = myData.map(myData.map(({name, city,position},index) => {
+  return <Main key={index} name={name} city={city}
+  position={position}/>;
+}));
 
 function App() {
 
@@ -43,14 +47,20 @@ function App() {
       }
   */}
 
-  {/* to error remove in dev tools give unique key */}
+  {/* to error remove in dev tools give unique key 
 
-{
-    myData.map(({name, city,position},index) => {
-      return <Main key={index} name={name} city={city}
-      position={position}/>;
-    })
-}
+    {
+        myData.map(({name, city,position},index) => {
+          return <Main key={index} name={name} city={city}
+          position={position}/>;
+        })
+    }
+
+*/}
+
+    {
+      MainBlock
+    }
 
     </>
 
