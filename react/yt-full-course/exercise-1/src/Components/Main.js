@@ -1,6 +1,6 @@
 
 
-function Main({children,name,city,position}){
+function Main({name,city,position}){
 
     
     return(
@@ -10,8 +10,8 @@ function Main({children,name,city,position}){
                 <li>{name}</li>
                 <li>{city}</li>
                 <li>{position}</li>
+                <li>JavaScript</li>
             </ul>
-            {children}
         </div>
         
     );

@@ -1,44 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
 import Main from './Components/Main';
+
+const myData = [
+  {
+    name: 'Tharindu',
+    city: 'Galle',
+    position: 'Student'
+  },
+
+  {
+    name: 'Madushnak',
+    city: 'Matara',
+    position: 'Web Developer'
+  },
+
+  {
+    name: 'Dilshan',
+    city: 'Colombo',
+    position: 'Full stack Developer'
+  },
+
+  {
+    name: 'Shankar',
+    city: 'Jafna',
+    position: 'Mobile app Developer'
+  }
+
+];
 
 function App() {
 
   return(
-    // <>
-    //   <div>
-    //   <h1>Tharindu</h1>
-    //   </div>
-    //   <p>Hello</p>
-    // </>
+  
+    <>
 
-    <section>
-      <div> 
+      {/* <div> 
         TDM Madushanka
-      <h1>Tharindu</h1>
+        <h1>Tharindu</h1>
       </div>
-      <p>Hello</p>
 
-      {/* import the Main function */}
-      <Main />
-      <Main />
-      <Main />
-      <Main />
-      <Main />
-      <Main />
-      {/* import the Main function */}
-      <Main>
-        <h5>This is children property inside Main function</h5>
-        <p>I am children pargraph</p>
-      </Main>
+      <p>Hello</p> */}
 
-        {/* This is manual parametering */}
+        {/* looping array by using map */}
+
+        {/* send dynimacaly array data to Main component */}
         
-        <Main name='Shankar' city='Colombo' position='web dev'/>
-        <Main name='Madu' city='Matara' position='full stack dev'/>
-     
+      {
+        myData.map(element => {
+          // return <p>{element.name}</p>
+          return <Main name={element.name} city={element.city}
+          position={element.position}/>;
+        })
+      }
 
-    </section>
+    </>
 
   ); 
 }
