@@ -2,6 +2,9 @@ import './App.css';
 import Main from './Components/Main';
 import myData from './Data/myData';
 
+// import a file with another way
+// import {myData} from './Data/myData'; 
+
 
 function App() {
 
