@@ -44,12 +44,22 @@ function App() {
         {/* looping array by using map */}
 
         {/* send dynimacaly array data to Main component */}
-        
-      {
+
+      {/* {
         myData.map(element => {
           // return <p>{element.name}</p>
           return <Main name={element.name} city={element.city}
           position={element.position}/>;
+        })
+      } */}
+
+
+{/* By using Object distructuring */}
+      {
+        myData.map(({name, city,position}) => {
+          // return <p>{element.name}</p>
+          return <Main name={name} city={city}
+          position={position}/>;
         })
       }
 
