@@ -12,11 +12,16 @@ const mainBlock = myData.map((({name, city,position},index) => {
 
 // functional component
 
-// const NewBlock = () =>{
-//   return(<>
-    
-//   </>)
-// }
+const NewBlock = () =>{
+  return(<>
+    {
+      myData.map((({name, city,position},index) => {
+        return <Main key={index} name={name} city={city}
+        position={position}/>;
+      }))
+    }
+  </>)
+}
 
 function App() {
   return(  
@@ -33,7 +38,9 @@ function App() {
 
 */}
 
-    {mainBlock}     
+    {/* {mainBlock}      */}
+
+    <NewBlock/>
 
     </>
 
