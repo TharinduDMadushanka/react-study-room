@@ -1,3 +1,10 @@
+.main-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-block-container{
   width: 90%;
   display: grid;
@@ -9,4 +16,10 @@
 .main-block-container img{
   width: 100%;
   object-fit: contain;
+}
+
+.main-block-container .main-block-details p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
