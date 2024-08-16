@@ -24,7 +24,7 @@ const myData = [
       name: 'Shankar',
       city: 'Jafna',
       position: 'Mobile app Developer',
-      Image:"https://static.vecteezy.com/system/resources/thumbnails/029/785/081/small_2x/cute-pink-teddy-toy-bear-on-blurred-forest-autumn-background-photo.jpg"
+      Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJm_DPon7rnKmBOlnW1CD21UW83iHWmWr8Iw&s"
     }
   
   ];
