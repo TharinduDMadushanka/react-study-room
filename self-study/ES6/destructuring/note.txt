@@ -1,0 +1,15 @@
+~ Destructing Arrays ~
+
+const vehicles = ['mustang', 'f-150', 'expedition'];
+
+// old way
+const car = vehicles[0];
+const truck = vehicles[1];
+const suv = vehicles[2];
+
+//new way
+
+const [car, truck, suv] = vehicles;
+
+//If we only want the car and suv we can simply leave out the truck but keep the comma
+const [car,, suv] = vehicles;
