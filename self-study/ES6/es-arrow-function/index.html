@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Function</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+  
+<script>
+    //regular function
+    hello1 = function() {
+    return "Hello from regular function";
+    }
+
+    // Arrow function
+    hello2 = () => {
+        return "Hello from Arrow function";
+    }
+
+    // if function has only one statement & its returns a value
+    hello3 = () => "Hello World!";
+
+    // If you have parameters, you pass them inside the parentheses
+    hello4 = (val) => "Hello " + val;
+
+
+    document.getElementById("demo1").innerHTML = hello1();
+    document.getElementById("demo2").innerHTML = hello2();
+    document.getElementById("demo3").innerHTML = hello3();
+    document.getElementById("demo4").innerHTML = hello4("TDM");
+</script>
+
+</body>
+</html>
