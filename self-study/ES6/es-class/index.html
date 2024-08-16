@@ -8,18 +8,28 @@
     //simple class constructor
 
     class Car {
-    constructor(name,speed) {
+    constructor(name) {
         this.brand = name;
-        this.speed = speed;
-    }
+        // this.speed = speed;
+        }
+
+        present() {
+            return 'I have a ' + this.brand;
+        }
+
     }
 
     // Create an object called "mycar" based on the Car class
     const mycar = new Car("Ford");
-    const mycar2 = new Car("Ford",120);
+    // const mycar2 = new Car("Ford",120);
 
     document.write(mycar.brand);
-    console.log(mycar2.brand,mycar2.speed)
+
+    document.write(mycar.present());
+
+
+    // console.log(mycar2.brand,mycar2.speed)
+    console.log(mycar.brand)
     </script>
 
 </body>
