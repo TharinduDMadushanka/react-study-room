@@ -1,3 +1,7 @@
 Alternatively, you can use a "fragment" to wrap multiple lines. This will prevent unnecessarily adding extra nodes to the DOM.
-
 A fragment looks like an empty HTML tag: <></>.
+
+Elements Must be Closed
+    JSX follows XML rules, and therefore HTML elements must be properly closed.
+
+Attribute class = className
