@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 
 function Student(props){
 
@@ -9,6 +10,12 @@ function Student(props){
         </div>
     );
 
+}
+
+Student.prototype = {
+    name: PropTypes.string,
+    age: PropTypes.number,
+    isStudent: PropTypes.bool,
 }
 
 export default Student
