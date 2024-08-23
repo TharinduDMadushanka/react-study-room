@@ -8,7 +8,11 @@ function App() {
       <Student name="Shankar" age={42} isStudent={false}/>
       <Student name="Perera" age={50} isStudent={false}/>
       <Student name="Madushanka" age={18} isStudent={true}/>
+
       <Student name="PropTypes" age="12" isStudent={true}/>
+      
+      <Student name="Hello"/>
+      <Student/>
     </>
   )
 }
@@ -26,4 +30,10 @@ export default App
  * Prop Types
  * a machanism that ensure that the passed value is of the correct data type
  * age : PropsType.number
+ */
+
+/**
+ * Default Props
+ * default values for props in case yhey are not passed from the parent component
+ * name: "Guest"
  */
