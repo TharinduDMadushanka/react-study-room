@@ -1,0 +1,20 @@
+
+.welcome-message{
+  font-size: 2.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(120, 98%, 32%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.log-promt{
+  font-size: 2.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(228, 45, 45);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
