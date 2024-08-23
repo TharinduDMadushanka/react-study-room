@@ -1,4 +1,5 @@
 import Button from "./Button/Button"
+import Button2 from "./Button2"
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Button/>
+      <Button2/>
     </>
   )
 }
