@@ -19,11 +19,24 @@ function List(){
     // fruits.sort((a,b) => a.calories - b.calories);
 
     //reverse Numerica order
-    fruits.sort((a,b) => b.calories - a.calories);
+    // fruits.sort((a,b) => b.calories - a.calories);
+
+    // const listItems = fruits.map(fruit => <li key={fruit.id}>
+    //     {fruit.name}: &nbsp;
+    //     <b>{fruit.calories}</b></li>);
+
+    /** 
+    const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
+
+    const listItems = lowCalFruits.map(lowCalFruit => <li key={lowCalFruit.id}>
+                                                      {lowCalFruit.name}: &nbsp;
+                                                      <b>{lowCalFruit.calories}</b></li>);
+
+    */
 
     const listItems = fruits.map(fruit => <li key={fruit.id}>
-                                            {fruit.name}: &nbsp;
-                                            <b>{fruit.calories}</b></li>);
+        {fruit.name}: &nbsp;
+        <b>{fruit.calories}</b></li>);                                                  
 
     // return(fruits);
     // return(<ul>{listItems}</ul>);
