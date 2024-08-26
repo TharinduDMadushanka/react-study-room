@@ -1,9 +1,11 @@
 import Button from "./Button"
+import Button2 from "./assets/Button2"
 
 function App() {
 
   return (
-    <Button/>
+    // <Button/>
+    <Button2/>
       
   )
 }
