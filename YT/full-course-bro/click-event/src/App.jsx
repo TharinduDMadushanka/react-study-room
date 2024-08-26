@@ -1,11 +1,13 @@
 import Button from "./Button"
-import Button2 from "./assets/Button2"
+import Button2 from "./Button2"
+import ProfilePicture from "./ProfilePicture"
 
 function App() {
 
   return (
     // <Button/>
-    <Button2/>
+    // <Button2/>
+    <ProfilePicture/>
       
   )
 }
