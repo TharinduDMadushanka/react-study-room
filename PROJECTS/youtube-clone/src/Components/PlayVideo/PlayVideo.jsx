@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './PlayVideo.css'
 import video1 from '../../assets/video.mp4'
 import like from '../../assets/like.png'
@@ -7,18 +7,47 @@ import share from '../../assets/share.png'
 import save from '../../assets/save.png'
 import jack from '../../assets/jack.png'
 import profile from '../../assets/userProfile.jpg'
+import { API_KEY, value_convertor } from '../../data'
+import moment from 'moment'
 
 
-const PlayVideo = () => {
+const PlayVideo = ({videoId}) => {
+
+    const [apiData, setApiData] =useState(null);
+    const [chanelData, setChanelData] =useState(null);
+
+    const fetchVideoData = async () =>{
+        // Fetching video data
+        const videoDetails_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
+        await fetch(videoDetails_url).then(res=>res.json()).then(data=>setApiData(data.items[0]))
+    }
+
+    const fetchOtherData = async ()=>{
+        //fetch chanels other data like img, subs
+        const chanelData_url = ` https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${apiData.snippet.channelId}&key=${API_KEY}`
+        await fetch(chanelData_url).then(res=> res.json()).then(data=> setChanelData(data.items[0]))
+    }
+
+    useEffect(()=>{
+        fetchVideoData();
+    },[videoId])
+
+    useEffect(()=>{
+        fetchOtherData();
+    },[apiData])
+
   return (
     <div className='play-video'>
-        <video src={video1} controls autoPlay muted></video>
-        <h3>Best Youtube chanel to learn webdevelopment</h3>
+        {/* <video src={video1} controls autoPlay muted></video> */}
+
+        {/* this coppied from yt */}
+        <iframe  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>{apiData?apiData.snippet.title:"Title Here"}</h3>
         <div className="play-video-info">
-            <p>1525 Vies &bull; 2 days ago</p>
+            <p>{apiData?value_convertor(apiData.statistics.viewCount):"16K"} Views &bull;  {apiData?.snippet?.publishedAt ? moment(apiData.snippet.publishedAt).fromNow() : "Unknown date"}</p>
             <div>
-                <span><img src={like} alt="" />125</span>
-                <span><img src={dislike} alt="" />2</span>
+                <span><img src={like} alt="" />{apiData?value_convertor(apiData.statistics.likeCount):"155"}</span>
+                <span><img src={dislike} alt="" /></span>
                 <span><img src={share} alt="" />share</span>
                 <span><img src={save} alt="" />save</span>
             </div>
@@ -26,19 +55,18 @@ const PlayVideo = () => {
         <hr />
 
         <div className="publisher">
-            <img src={jack} alt="" />
+            <img src={chanelData?chanelData.snippet.thumbnails.default.url:""} alt="" />
             <div>
-                <p>TDM YT</p>
-                <span>1M Subscribers</span>
+                <p>{apiData?apiData.snippet.channelTitle:""}</p>
+                <span>{chanelData?value_convertor(chanelData.statistics.subscriberCount):""} Subscribers</span>
             </div>
             <button>Subscribe</button>
         </div>
 
         <div className="vid-description">
-            <p>Chanel that makes learning easy</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>{apiData?apiData.snippet.description:"No description"}</p>
             <hr />
-            <h4>130 Comments</h4>
+            <h4>{apiData?value_convertor(apiData.statistics.commentCount):"102"} Comments</h4>
             <div className="comment">
                 <img src={profile} alt="" />
                 <div>
