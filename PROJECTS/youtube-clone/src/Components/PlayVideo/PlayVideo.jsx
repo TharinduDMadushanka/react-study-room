@@ -9,9 +9,12 @@ import jack from '../../assets/jack.png'
 import profile from '../../assets/userProfile.jpg'
 import { API_KEY, value_convertor } from '../../data'
 import moment from 'moment'
+import { useParams } from 'react-router-dom'
 
 
-const PlayVideo = ({videoId}) => {
+const PlayVideo = () => {
+
+    const {videoId} = useParams();
 
     const [apiData, setApiData] =useState(null);
     const [chanelData, setChanelData] =useState(null);
