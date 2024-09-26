@@ -7,6 +7,7 @@ import play_icon from '../../assets/play_icon.png'
 import info_icon from '../../assets/info_icon.png'
 import TitleCards from '../../components/TitleCards/TitleCards'
 import Footer from '../../components/Footer/Footer'
+import hero_img2 from '../../assets/bg-2.jpg'
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
     <div className='home'>
       <Navbar/>
       <div className="hero">
-        <img src={hero_img} alt=""  className='banner-img' />
+        <img src={hero_img2} alt=""  className='banner-img' />
 
         <div className="hero-cation">
           <img src={hero_title} alt="" className='caption-img'/>
