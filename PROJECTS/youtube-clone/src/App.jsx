@@ -6,6 +6,7 @@ import Video from './Pages/Video/Video'
 
 const App = () => {
 
+  // to manage the sidebar’s open/close state dynamically.
   const [sidebar, setSidebar] = useState(true);
 
   return (
