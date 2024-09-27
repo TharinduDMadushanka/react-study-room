@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './Player.css'
 import back_aarow from '../../assets/back_arrow_icon.png'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 // get youtube trailer video and its details by video id using tmdb api [get movie id & movies -> video and paste that id and you will get the details for respective video]
 const Player = () => {
 
   const {id} = useParams();
+
+  const navigate = useNavigate();
 
   const [apiData, setApiData] = useState({
     name: "",
@@ -35,8 +37,8 @@ const Player = () => {
   
   return (
 
-    <div className='player'>
-      <img src={back_aarow} alt="" />
+    <div className='player'> 
+      <img src={back_aarow} alt="" onClick={()=>{navigate('/')}}/> {/* when click arrow navigate to the home page */}
       <iframe width='90%' height='90%' 
         src= {`https://www.youtube.com/embed/${apiData.key}`}  // set respective video traile by passing fetch datas key 
         title='trailer' frameBorder='0' allowFullScreen> {/* url fr movie trailer(yt pattern) */}

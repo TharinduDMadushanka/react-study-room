@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './TitleCards.css';
 import card_data from '../../assets/cards/Cards_data';
+import { Link } from 'react-router-dom';
 
 const TitleCards = ({title, category}) => {
 
@@ -41,10 +42,11 @@ const TitleCards = ({title, category}) => {
       <div className="card-list" ref={cardsRef}>
         {apiData.map((card, index) => {
           return (
-            <div className="card" key={index}>
+            // conver div in to link for when click it will open in player page by passing the video id to yt link id props
+            <Link to={`/player/${card.id}`} className="card" key={index}>
               <img src={`https://image.tmdb.org/t/p/w500`+card.backdrop_path} alt="" /> {/* complete movie img url from tmdb movie url patter */}
               <p>{card.original_title}</p>
-            </div>
+            </Link>
           );
         })}
       </div>
