@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 
 // Your web app's Firebase configuration
@@ -33,7 +34,8 @@ const signup = async (name, email, password) =>{
         });
     } catch (error){
         console.log(error);
-        alert(error);
+        // alert(error);
+        toast.error(error.code)
     }
 }
 
@@ -42,7 +44,8 @@ const login = async (email, password)=>{
         await signInWithEmailAndPassword(auth, email,password)
     }catch(error){
         console.log(error);
-        alert(error);
+        // alert(error);
+        toast.error(error.code)
     }
 }
 
