@@ -12,6 +12,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const user_auth = async (event)=>{
+    event.preventDefault();
+    if(signState==="Sign In"){
+      await login(email, password)
+    }else{
+      await signup(name,email,password)
+    }
+  }
+
   return (
     <div className='login'>
       <img src={logo} alt="" className='login-logo'/>
@@ -23,19 +32,19 @@ const Login = () => {
 
           {/* if sign in name input field is hidden */}
           {signState==="Sign Up"?
-            <input value={name} onChange={(event)=>{event.target.value}} 
+            <input value={name} onChange={(event)=>{setName(event.target.value)}} 
             type="text"
             placeholder='Your name'/>:<></>
           }
-          <input  value={email} onChange={(event)=>{event.target.value}}
+          <input  value={email} onChange={(event)=>{setEmail(event.target.value)}}
           type="email" 
           placeholder='Email'/>
 
-          <input  value={password} onChange={(event)=>{event.target.value}}
+          <input  value={password} onChange={(event)=>{setPassword(event.target.value)}}
            type="password" 
            placeholder='Password'/>
 
-          <button>{signState}</button>
+          <button onClick={user_auth} type='submit'>{signState}</button>
 
           <div className="form-help">
             <div className="remember">
