@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Player.css'
 import back_aarow from '../../assets/back_arrow_icon.png'
+import { useParams } from 'react-router-dom'
 
 // get youtube trailer video and its details by video id using tmdb api [get movie id & movies -> video and paste that id and you will get the details for respective video]
 const Player = () => {
+
+  const {id} = useParams();
 
   const [apiData, setApiData] = useState({
     name: "",
@@ -21,7 +24,8 @@ const Player = () => {
   };
 
   useEffect(()=>{
-    fetch('https://api.themoviedb.org/3/movie/957452/videos?language=en-US', options)
+    // pass the respective movie id to display trailer
+    fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
     .then(response => response.json())
     .then(response => setApiData(response.results[0])) // store the details of fetched data results first object
     .catch(err => console.error(err));
