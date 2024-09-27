@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
+import { login, signup} from '../../firebase'
 
 const Login = () => {
 
   const [signState, setSignState] = useState("Sign In");
+
+  // states for store credentions for firebase db
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className='login'>
@@ -12,11 +18,23 @@ const Login = () => {
 
       <div className="login-form">
         <h1>{signState}</h1>
+
         <form>
+
           {/* if sign in name input field is hidden */}
-          {signState==="Sign Up"?<input type="text" placeholder='Your name'/>:<></>}
-          <input type="email" placeholder='Email'/>
-          <input type="password" placeholder='Password'/>
+          {signState==="Sign Up"?
+            <input value={name} onChange={(event)=>{event.target.value}} 
+            type="text"
+            placeholder='Your name'/>:<></>
+          }
+          <input  value={email} onChange={(event)=>{event.target.value}}
+          type="email" 
+          placeholder='Email'/>
+
+          <input  value={password} onChange={(event)=>{event.target.value}}
+           type="password" 
+           placeholder='Password'/>
+
           <button>{signState}</button>
 
           <div className="form-help">
