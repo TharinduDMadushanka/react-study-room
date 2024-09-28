@@ -1,0 +1,9 @@
+* Use TMDB API for get movie data
+
+* use Firebase for user authentication and use firebase db for store data
+(https://developer.themoviedb.org/reference/movie-videos)
+
+* Alerts react-toastify
+(https://www.npmjs.com/package/react-toastify)
+
+*Firebase db -> https://console.firebase.google.com/project/netflix-clone-1bb90/firestore/databases/-default-/data/~2Fuser~2FHJk5tIiyNhmOnC6WTjPf
