@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.svg'
+import menu_open from '../../assets/menu_open.svg'
+import menu_close from '../../assets/menu_close.svg'
 import underline from '../../assets/nav_underline.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
@@ -9,11 +11,25 @@ const Navbar = () => {
   // add undeline img when click the nav links
   const [menu, setMenu] = useState("home");
 
+  const menuRef = useRef();
+
+  // menu open
+  const opneMenu = ()=>{
+      menuRef.current.style.right="0";
+  }
+
+  // menu hidde
+  const closeMenu = ()=>{
+      menuRef.current.style.right="-350px";
+  }
+
   return (
     <div className='navbar'>
       <img src={logo} alt="" />
+      <img src={menu_open}onClick={opneMenu} alt="" className='nav-mob-open'/>
 
-      <ul className="nav-menu">
+      <ul ref={menuRef} className="nav-menu">
+        <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />
         <li> 
           <AnchorLink className='anchor-link' href='#home'> <p onClick={()=>setMenu("home")}>Home</p> </AnchorLink>  {menu==="home"?<img src={underline} alt="" />:<></>} 
         </li>
