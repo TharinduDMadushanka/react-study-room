@@ -1,35 +1,35 @@
 import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
-    title:{
-        type:String,
-        reqired:true
+    title: {
+        type: String,
+        required: true
     },
-    description:{
-        type:String,
-        reqired:true
+    description: {
+        type: String,
+        required: true
     },
-    category:{
-        type:String,
-        reqired:true
+    category: {
+        type: String,
+        required: true
     },
-    author:{
-        type:String,
-        reqired:true
+    author: {
+        type: String,
+        required: true
     },
-    image:{
-        type:String,
-        reqired:true
+    image: {
+        type: String,
+        required: true
     },
-    authorImg:{
-        type:String,
-        reqired:true
+    authorImg: {
+        type: String,
+        required: true
     },
-    date:{
-        type:Date,
-        default:Date.now()
+    date: {
+        type: Date,
+        default: Date.now
     }
-})
+});
 
-const BlogModel = mongoose.models.blog || mongoose.Model('blog', Schema)
-export default BlogModel
+const BlogModel = mongoose.models.blog || mongoose.model('blog', Schema);
+export default BlogModel;
