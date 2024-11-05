@@ -43,6 +43,14 @@ const page = () => {
 
       if (response.data.success) {
           toast.success(response.data.msg)
+          setImage(false);
+          setData({
+            title: "",
+            description: "",
+            category: "Startup",
+            author: "Alex Bennet",
+            authorImg: "/author_img.png"
+          });
       }else{
           toast.error("Error");
       }
