@@ -1,7 +1,9 @@
 'use client'
 import { assets } from '@/Assets/assets'
+import axios from 'axios'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 const page = () => {
 
@@ -26,9 +28,30 @@ const page = () => {
     console.log(data);
   }, [data]); // This will log the updated data whenever it changes
 
+  const onSubmitHandler = async (e) =>{
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append('title',data.title);
+      formData.append('description',data.description);
+      formData.append('category',data.category);
+      formData.append('author',data.author);
+      formData.append('image',image);
+      formData.append('authorImg',data.authorImg);
+
+      const response = await axios.post('http://localhost:3000/api/blog', formData);
+
+      if (response.data.success) {
+          toast.success(response.data.msg)
+      }else{
+          toast.error("Error");
+      }
+
+  }
+
   return (
     <>
-      <form className='pt-5 px-5 sm:pt-12 sm:pl-16'>
+      <form onSubmit={onSubmitHandler} className='pt-5 px-5 sm:pt-12 sm:pl-16'>
 
         <p className='text-xl'>Upload thumbnail</p>
         <label htmlFor="image">
