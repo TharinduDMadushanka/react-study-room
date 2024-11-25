@@ -1,12 +1,47 @@
+/* General Hover Styles */
 .custom-hover:hover {
-    color: gray;
-  }
-
-  .nav-links ul a:hover{
-    color: gray;
-  }
-
-ul a:hover{
-    color: gray;
+  color: gray;
 }
-  
+
+/* Mobile Menu Icon */
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  z-index: 1000;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Mobile Navigation Links */
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav ul li {
+  margin: 1rem 0;
+}
+
+/* Cross Icon */
+.cross-icon {
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
