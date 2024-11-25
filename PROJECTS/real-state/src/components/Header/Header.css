@@ -1,8 +1,19 @@
 .bg-cover {
-    background-size: cover;
-  }
-  
-  .bg-center {
-    background-position: center;
-  }
-  
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+h2 {
+  max-width: 768px; /* Tailwind's max-w-3xl */
+}
+
+.btn {
+  border-radius: 0.25rem; /* Ensures rounded corners match Tailwind */
+}
+
+.hero-title{
+  margin-left: 230px;
+}

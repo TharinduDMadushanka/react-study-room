@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css'; // Additional CSS for styling
+import './Header.css'; // Additional CSS for custom styles
 import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
@@ -10,6 +10,20 @@ const Header = () => {
       id="Header"
     >
       <Navbar />
+
+      <div className="container text-center text-white py-4 px-3 px-md-5">
+        <h2 className="display-4 fw-semibold pt-5 hero-title">
+          Explore homes that fit your dreams
+        </h2>
+        <div className="mt-4">
+          <a href="#Projects" className="btn btn-outline-light me-3 px-4 py-2 rounded">
+            Projects
+          </a>
+          <a href="#Contact" className="btn btn-primary px-4 py-2 rounded">
+            Contact us
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
