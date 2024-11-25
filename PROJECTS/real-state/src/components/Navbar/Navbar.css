@@ -1,0 +1,12 @@
+.custom-hover:hover {
+    color: gray;
+  }
+
+  .nav-links ul a:hover{
+    color: gray;
+  }
+
+ul a:hover{
+    color: gray;
+}
+  
