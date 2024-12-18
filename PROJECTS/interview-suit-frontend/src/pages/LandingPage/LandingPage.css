@@ -1,0 +1,108 @@
+
+/* ======== Navigation Bar ========== */
+
+.land-navbar-brand img{
+    width: 70px;
+}
+
+.land-nav-links-section{
+  margin-left: 450px;
+  
+}
+
+.land-nav-links{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 15px;
+  font-weight:500;
+  color: #9181F4;
+}
+
+.land-nav-links li a{
+  color: #5A64B2;
+  transition: 0.5s;
+}
+
+.land-nav-links li a:hover{
+transform: scale(1.1);
+color: #9181F4;
+}
+
+.landing-nav-btn{
+  margin-left: 220px;
+  display: flex;
+  gap: 30px;
+}
+
+.landing-nav-btn button{
+  border: 2px solid #5A64B2;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight:500;
+  color: #9181F4;
+  transition: 0.5s;
+}
+
+.landing-nav-btn button:hover{
+  color: #9181F4;
+  transform: scale(1.1);
+  border: 2px solid #5A64B2;
+}
+
+/* ======== Hero Section ========== */
+
+.hero-section{
+  margin-top: 180px;
+}
+
+.left-col h1{
+  color: #5A64B2;
+  font-size: 50px;
+  font-weight:600;
+  line-height: 70px;
+}
+
+.hero-btn button{
+  width: 150px;
+  border: 2px solid #5A64B2;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight:500;
+  color: #9181F4;
+}
+
+.hero-btn button:hover{
+  background: #5A64B2;
+  border: none;
+}
+
+/* ======== Footer Section ========== */
+
+
+.footer{
+  width: 1000px;
+  margin-left: 250px;
+  border-radius: 50px;
+  background: #5A64B2;
+}
+
+.footer .footer-item {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  align-items: center; /* Vertically align items */
+}
+
+.footer .footer-item i {
+  color: white; /* Customize icon color */
+}
+
+.footer .footer-title {
+  font-weight: bold;
+  font-size: 1.1rem; /* Adjust title font size */
+  color: white;
+}
+
+.footer .footer-item .footer-title-sub{
+  color: hsla(0, 0%, 100%, 0.63);
+}

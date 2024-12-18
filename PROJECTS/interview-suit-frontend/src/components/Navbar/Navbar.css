@@ -1,0 +1,37 @@
+/* Make Navbar position absolute and transparent */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* background: rgba(0, 0, 0, 0.5); */
+  }
+  
+  .nav-links-section {
+    margin-left: 330px;  
+  }
+  
+  .navbar-brand img {
+    width: 80px;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row; /* Align navbar links horizontally */
+    gap: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff; /* White text for better visibility */
+  }
+  
+  .nav-links li a {
+    color: #fff; /* White text color */
+    transition: 0.5s;
+  }
+  
+  .nav-links li a:hover {
+    transform: scale(1.1);
+    color: white; 
+  }
+  

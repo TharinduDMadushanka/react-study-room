@@ -1,0 +1,140 @@
+
+/* =========== Left Column ========= */
+
+.signup-bg img{
+    width: 90%;
+    margin-left: -12px;
+    height: 100vh;
+}
+
+.sigun-content{
+    margin-top: -630px;
+}
+
+.sigun-content h1{
+    color: white;
+    margin-left: 120px;
+}
+
+.signup-logo img{
+    width: 350px;
+    margin-left: 150px;
+    margin-top: -30px;
+}
+
+.sigun-content h3{
+    color: white;
+    margin-left: 80px;
+    line-height: 50px;
+}
+
+.signup-sub-para{
+    margin-left: 10px;
+    margin-left: 180px;
+}
+
+
+/* =========== Right Column ========= */
+
+.right-content{
+    padding: 30px 50px;
+    margin-top: 35px;
+    border: 1px solid hsla(0, 0%, 20%, 0.149);
+    width: 600px;
+    border-radius: 20px;
+    margin-left: 25px;
+    height: 630px;
+}
+
+.right-content form{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.form-group input{
+    width: 500px;
+    height: 50px;
+}
+
+.reg-btn{
+    background: #9181F4;
+    width: 400px;
+    margin-left: 50px;
+    color: white;
+    height: 50px;
+    font-weight: 600;
+}
+
+.reg-btn:hover{
+    background: #8473f1;
+    color: white;
+}
+
+.optional-signup hr {
+    margin-top: 30px;
+    width: 500px;
+  }
+  
+  .optional-signup-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 100px;
+  }
+  
+  .optional-signup-btn button {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 50px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .optional-signup-font{
+    color: #333;
+  }
+  
+  .google-signup {
+    color: #0077b5; /* Google Red */
+    border-color: #ea4335;
+  }
+  
+  .linkedin-signup {
+    color: #0077b5; /* LinkedIn Blue */
+    border-color: #0077b5;
+  }
+  
+  .google-signup:hover,
+  .linkedin-signup:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .optional-signup-btn i {
+    font-size: 20px; /* Icon size */
+  }
+  
+  .already-have-acc{
+    margin-top: 20px;
+  }
+
+  .already-have-acc p{
+    color: hsla(0, 0%, 0%, 0.652);
+  }
+
+  .already-have-acc a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #8473f1;
+    font-weight: 600;
+  }
